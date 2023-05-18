@@ -35,7 +35,7 @@ ORDER BY total DESC
 LIMIT 5; 
 
 -- To find out if there are bots, find users who have liked every single photo on the site.
-SEELCT username, COUNT(*) liked_photos FROM users
+SELECT username, COUNT(*) liked_photos FROM users
 INNER JOIN likes 
 ON users.id=likes.user_id
 GROUP BY likes.user_id
